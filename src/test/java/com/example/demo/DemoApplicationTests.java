@@ -25,4 +25,11 @@ public class DemoApplicationTests {
         .andExpect(MockMvcResultMatchers.content().string("hello"));
   }
 
+  @Test
+  public void test2() throws Exception {
+    this.mvc.perform(MockMvcRequestBuilders.post("/"))
+        .andExpect(MockMvcResultMatchers.status().isOk())
+        .andExpect(MockMvcResultMatchers.content().string("big"));
+  }
+
 }
